@@ -17,7 +17,7 @@ public class UsuarioData {
    
     private static List<Usuario> listaUsuarios;
     
-    static{
+    /*static{
         
         listaUsuarios = new ArrayList<Usuario>(){
             {
@@ -28,7 +28,7 @@ public class UsuarioData {
             }
         };
     }
-
+*/
     public static List<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }

@@ -45,40 +45,14 @@ public class UsuariosServlet extends HttpServlet {
                  documento = request.getParameter("txtdocumento");
                 String nombres = request.getParameter("txtnombres");
                 String apellidos = request.getParameter("txtapellidos");
-                String email = request.getParameter("txtemail");
-                String clave = request.getParameter("txtclave");
-                Boolean estado = Boolean.valueOf(request.getParameter("txtestado"));
-                String rol = request.getParameter("txtrol");
-                Usuario usuario = new Usuario(documento, nombres, apellidos, email, clave, rol, estado);
+                String tipotrabajador = request.getParameter("txttipotrabajador");
+                String tipocredito = request.getParameter("txttipocredito");
+                String trabajaenlacompania = request.getParameter("txtestado");
+                Usuario usuario = new Usuario(documento, nombres, apellidos, tipotrabajador, tipocredito, trabajaenlacompania);
 
                 String mensaje = uBusinessImpl.crearUsuario(usuario);
                 session.setAttribute("MENSAJE", mensaje);
                 rd = request.getRequestDispatcher("/mensaje.jsp");
-                break;
-             case "eliminar":                
-                String msgDelete = uBusinessImpl.eliminarUsuario(documento);
-                //System.out.println(msgDelete);
-                rd = request.getRequestDispatcher("/view/usuarioslista.jsp");
-                break;
-            case "actualizar":              
-                session.setAttribute("documento", documento);
-                rd = request.getRequestDispatcher("/view/usuarioEditar.jsp");                
-                
-                break;
-            case "save":     
-                nombres = request.getParameter("txtnombres");
-                apellidos = request.getParameter("txtapellidos");
-                email = request.getParameter("txtemail");
-                clave = request.getParameter("txtclave");
-                estado = Boolean.valueOf(request.getParameter("txtestado"));
-                rol = request.getParameter("txtrol");
-                usuario = new Usuario(documento, nombres, apellidos, email, clave, rol, estado);
-
-                mensaje = uBusinessImpl.modificarUsuario(usuario);                
-                
-                session.setAttribute("documento", documento);
-                rd = request.getRequestDispatcher("/view/usuarioslista.jsp");                
-                
                 break;
             case "listar":
                 List<Usuario> listaUsuarios = uBusinessImpl.obtenerListaUsuarios();

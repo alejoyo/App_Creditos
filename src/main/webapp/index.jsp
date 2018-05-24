@@ -18,6 +18,7 @@
   </head>
 
   <body class="text-center">
+
       <form>
           <button class="btn btn-lg btn-primary btn-block" type="submit">
               Listar creditos
@@ -25,7 +26,7 @@
       </form>
       <form>
           <button class="btn btn-lg btn-primary btn-block" type="submit">
-              Cual es el tipo de credito que mÃ¡s utilizan
+              Cual es el tipo de credito que más utilizan
           </button>
       </form>
       <form>
@@ -36,8 +37,9 @@
       </form>
       <form>
           <button class="btn btn-lg btn-primary btn-block" type="submit">
-              Quienes prestan mÃ¡s? Los independiente o los dependientes?
+              Quienes prestan más? Los independiente o los dependientes?
           </button>
       </form>
+      <a class="btn btn-lg btn-primary btn-block" href="view/usuarios.jsp">Registrarse</a>
   </body>
 </html>

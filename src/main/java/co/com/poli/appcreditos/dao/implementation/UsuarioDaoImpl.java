@@ -56,16 +56,17 @@ public class UsuarioDaoImpl implements IUsuarioDao{
         UsuarioData.setListaUsuarios(listaUsuarios);
         return "Usuario Eliminado";
     }
-
+    
     @Override
     public Usuario obtenerUsuario(String email, String clave) {
         Usuario usuario = null;
         List<Usuario> obtenerListaUsuarios = obtenerListaUsuarios();
         for (Usuario user : obtenerListaUsuarios) {
+            /*
             if(user.getEmail().equals(email) && 
                user.getClave().equals(clave)){
                 usuario = user;
-            }
+            }*/
         }
         return usuario;
     }    

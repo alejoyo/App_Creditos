@@ -16,28 +16,20 @@ public class Usuario {
     private String documento;
     private String nombres;
     private String apellidos;
-    private String email;
-    private String clave;
-    private String rol;
-    private Boolean estado;
+    private String tipotrabajador;
+    private String tipocredito;
+    private String trabajaenlacompania;
 
-    public Usuario(String documento, String nombres, String apellidos, String email, String clave, String rol, Boolean estado) {
+    public Usuario(String documento, String nombres, String apellidos, String tipotrabajador, String tipocredito, String trabajaenlacompania) {
         this.documento = documento;
         this.nombres = nombres;
         this.apellidos = apellidos;
-        this.email = email;
-        this.clave = clave;
-        this.rol = rol;
-        this.estado = estado;
+        this.tipotrabajador = tipotrabajador;
+        this.tipocredito = tipocredito;
+        this.trabajaenlacompania = trabajaenlacompania;
+
     }
 
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
 
     public String getDocumento() {
         return documento;
@@ -63,28 +55,28 @@ public class Usuario {
         this.apellidos = apellidos;
     }
 
-    public String getEmail() {
-        return email;
+    public String gettipotrabajador() {
+        return tipotrabajador;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void settipotrabajador(String tipotrabajador) {
+        this.tipotrabajador = tipotrabajador;
     }
 
-    public String getClave() {
-        return clave;
+    public String gettipocredito() {
+        return tipocredito;
     }
 
-    public void setClave(String clave) {
-        this.clave = clave;
+    public void settipocredito(String tipocredito) {
+        this.tipocredito = tipocredito;
     }
 
-    public String getRol() {
-        return rol;
+    public String gettrabajaenlacompania() {
+        return trabajaenlacompania;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void settrabajaenlacompania(String trabajaenlacompania) {
+        this.trabajaenlacompania = trabajaenlacompania;
     }
 
     @Override
