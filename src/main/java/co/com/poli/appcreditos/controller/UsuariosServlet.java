@@ -47,7 +47,7 @@ public class UsuariosServlet extends HttpServlet {
                 String apellidos = request.getParameter("txtapellidos");
                 String tipotrabajador = request.getParameter("txttipotrabajador");
                 String tipocredito = request.getParameter("txttipocredito");
-                String trabajaenlacompania = request.getParameter("txtestado");
+                String trabajaenlacompania = request.getParameter("txttrabajacompania");
                 Usuario usuario = new Usuario(documento, nombres, apellidos, tipotrabajador, tipocredito, trabajaenlacompania);
 
                 String mensaje = uBusinessImpl.crearUsuario(usuario);
